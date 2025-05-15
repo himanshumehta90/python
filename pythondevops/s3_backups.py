@@ -11,8 +11,8 @@ follow below steps:
 4. go to security credetials --> create access keys
 5. select cli --> next --> create access key
 6. type aws configure in the ubuntu console
-7. paste the access key id: AKIA2UC3AMLHBLLTP4CA
-8. paste the aws scret access key: wXj75zzjvkwfw4gwCebmprMrY65XxMBwr/d3AtEJ
+7. paste the access key id:
+8. paste the aws scret access key:
 9. default region and other option --> as it is
 10. aws s3 ls --> to check ths list of s3 buckets in our account
 """
