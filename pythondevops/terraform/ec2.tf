@@ -1,6 +1,6 @@
-resource "aws_key_pair" "deployer" {
+resource "aws_key_pair" "terra_key" {
   key_name   = "terra-automate-key"
-  public_key = file("/Users/shubham/Documents/work/TrainWithShubham/terra-practice/terra-key.pub")
+  public_key = file("/home/protivitiadmin/terra-key.pub")
 }
 
 resource "aws_default_vpc" "default" {
@@ -51,7 +51,7 @@ resource "aws_security_group" "allow_user_to_connect" {
 resource "aws_instance" "testinstance" {
   ami             = var.ami_id
   instance_type   = var.instance_type
-  key_name        = aws_key_pair.deployer.key_name
+  key_name        = aws_key_pair.terra_key.key_name
   security_groups = [aws_security_group.allow_user_to_connect.name]
   tags = {
     Name = "Automate"
