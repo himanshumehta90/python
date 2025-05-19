@@ -6,6 +6,9 @@ def check_cpu(command): #defining a function
 def check_date(command):
     print(os.system(command))
 
+def disk_space(command):
+    print(os.system(command))
+
 def uptime(command):
     print(os.system(command))
 
@@ -14,7 +17,8 @@ def hostname(command):
 
 
 
-check_cpu("df -h") #calling a function
+check_cpu("du") #calling a function
 check_date("date")
 uptime("uptime")
 hostname("hostname")
+disk_space("df -h")
